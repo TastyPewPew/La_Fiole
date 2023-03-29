@@ -1,0 +1,37 @@
+{% include "header.html" %}
+
+{% block body %}
+<div class="one">
+    <div class="container">
+        <h1 class="txt text-center" style="font-size: 10vh">Convertisseur <span style="font-size: 3vh;">Merci la fiole :)</span></h1>
+        <hr>
+
+        <h4 class="txt" align='center'>Si vous souhaitiez convertir votre image en document texte, vous êtes au bon endroit !</h4>
+
+        <hr>
+        <br><br>
+        <h2 class="txt">Convertissez votre image !!</h2>
+
+        <div class="text-center">
+            <form action="scanner" method=post enctype=multipart/form-data>
+                <div class="input-group">
+                    <div class="custom-file">
+                        <input type="file" name="file" class="custom-file-input" id="inputGroupFile01"
+                               aria-describedby="inputGroupFileAddon01" accept="image/*">
+                        <label class="custom-file-label" for="inputGroupFile01">Choisir un fichier</label>
+                    </div>
+                </div>
+
+                <br>
+                <button type="submit" class="btn">Scanner l'image</button>
+            </form>
+        </div>
+    </div>
+
+{% if scanned %} 
+    <hr>
+    <h1>Le resultat ICI !</h1>
+{% endif %}
+{% endblock body %}
+
+{% include "footer.html" %}

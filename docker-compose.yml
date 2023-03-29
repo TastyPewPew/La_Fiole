@@ -1,0 +1,9 @@
+version: '3.3'
+
+services
+  ctfd:
+    image: registry.hackynov.fr/chall_la_fiole
+    container_name: container_la_fiole
+    restart: always
+    ports:
+      - "15069:80"

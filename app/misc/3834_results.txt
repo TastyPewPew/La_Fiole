@@ -1,0 +1,2 @@
+<p>return send_file(path, as_attachment=True,attachment_filename='results.txt')
+</p>
